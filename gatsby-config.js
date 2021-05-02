@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `dev.watanako.com`,
+    title: `watanako.dev`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Ko`,
+      summary: `A designer and front-end web developer who lives and works in Osaka.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `GatsbyJS,WordPressの技術ブログ`,
+    siteUrl: `https://dev.watanako.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
   },
   plugins: [
@@ -27,6 +27,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+       options: {
+         bucketName: "dev.watanako.com",
+        //  protocol: "https",
+        //  hostName: "dev.watanako.com",
+         acl: null
+       },
+     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
